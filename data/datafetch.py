@@ -10,7 +10,9 @@ from sqlalchemy.engine import create_engine
 
 load_dotenv()
 openai.api_key = os.getenv("OPENAI_API_KEY")
+openai.base_url="https://app.oxyapi.uk/v1"
 client = openai.Client()
+
 
 
 def retrieve_relevant_meme(meme_description: str):
