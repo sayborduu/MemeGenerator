@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+import os
 
 from data.datafetch import retrieve_relevant_meme
 from scraper.get_news_source import get_news_article
@@ -14,7 +15,7 @@ from utils.llm_queries import (
 )
 
 load_dotenv()
-
+os.environ["OPENAI_API_KEY"] = 'oxy-zu99ozUkRjhx4SqawPzksSgZgfgOplH5BNJvjWFLCdjLK'
 
 def send_to_logs(log, log_area, completed=None):
     if completed:
